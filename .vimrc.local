@@ -1,3 +1,6 @@
+"================= Workarounds ============
+set shell=/bin/bash "workaround for https://github.com/airblade/vim-gitgutter/issues/106
+
 " ================ Preferences ============
 if exists('+colorcolumn')
     set colorcolumn=80
