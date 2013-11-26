@@ -1,0 +1,78 @@
+" ================ Preferences ============
+if exists('+colorcolumn')
+    set colorcolumn=80
+    highlight ColorColumn ctermbg=red guibg=#592929
+else
+    highlight OverLength ctermbg=red guibg=#592929
+    match OverLength /\%81v.\+/
+endif
+
+" ================ Mappings  ==============
+"Retab the document
+map <F1> :retab<CR>
+
+"Toggle Paste mode so not as to autoident
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+"Toggle NERDTree
+map <F3> :NERDTreeToggle<CR>
+
+"Remove DOS Line Ending
+map <F4> :%s/\r\(\n\)/\1/g<CR>
+
+" Numbers Plugin 
+nnoremap <F5> :NumbersToggle<CR>
+nnoremap <F6> :set nornu<CR>
+
+" Tabman Plugin
+let g:tabman_toggle = '<F7>'
+let g:tabman_number = 0
+
+" =============== Skeleton files ===========
+" When creating a new python file, add the shebang
+function BufNewFile_PY()
+	0put = '#!/usr/bin/env python'
+	" additional lines use $put = '# Insert items here'
+	normal G
+endfunction
+
+autocmd BufNewFile *.py call BufNewFile_PY()
+
+" When creating a new php file, add the sheband
+"function BufNewFile_PHP()
+"	0put = '#!/usr/bin/env php'
+"	1put = '<?php'
+	" additional lines use $put = '# Insert items here'
+"	normal G
+"endfunction
+
+"autocmd BufNewFile *.php call BufNewFile_PHP()
+
+"JSON is javascript
+autocmd BufNewFile,BufRead *.json set ft=javascript"
+
+" ============== Changes to spf13 ==========
+
+"neocomplete
+"UnBundle 'neocomplcache'
+let g:neocomplcache_enable_at_startup = 0
+let g:SuperTabDefaultCompletionType = "context"
+
+"Better Folding Support
+let g:DisableAutoPHPFolding = 1
+set foldlevelstart=99
+
+let g:indent_guides_enable_on_vim_startup=0 "remove indent guides
+set noexpandtab " don't expand tabs to spaces
+set modeline "use modeline if recognized
+set modelines=1 "set how many modelines we want to try to read
+set nofoldenable "don't have everything folded
+let $PYTHONHOME='/System/Library/Frameworks/Python.framework/Versions/Current'
+set copyindent "copy the previous indentation on autoindenting
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+
+syntax match Tab /\t/
+hi Tab gui=underline guifg=blue ctermbg=blue

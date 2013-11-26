@@ -1,0 +1,4 @@
+"vim-gitgutter
+Bundle 'airblade/vim-gitgutter'
+Bundle 'Dinduks/vim-holylight'
+Bundle 'techlivezheng/vim-plugin-minibufexpl'
