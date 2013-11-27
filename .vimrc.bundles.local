@@ -1,4 +1,8 @@
 "vim-gitgutter
 Bundle 'airblade/vim-gitgutter'
+"Holylight
 Bundle 'Dinduks/vim-holylight'
+"MiniBufExplorer
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
+"YouCompleteMe
+Bundle 'Valloric/YouCompleteMe'
