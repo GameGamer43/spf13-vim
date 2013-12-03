@@ -79,3 +79,6 @@ set shiftwidth=4
 
 syntax match Tab /\t/
 hi Tab gui=underline guifg=blue ctermbg=blue
+
+"color preferences - molokai, peaksea, fruity, ir_black
+color molokai
