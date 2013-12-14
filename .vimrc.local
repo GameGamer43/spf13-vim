@@ -10,6 +10,7 @@ else
     match OverLength /\%81v.\+/
 endif
 
+set clipboard=unnamed
 " ================ Mappings  ==============
 "Retab the document
 map <F1> :retab<CR>
