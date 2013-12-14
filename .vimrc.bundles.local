@@ -6,3 +6,6 @@ Bundle 'Dinduks/vim-holylight'
 Bundle 'techlivezheng/vim-plugin-minibufexpl'
 "YouCompleteMe
 Bundle 'Valloric/YouCompleteMe'
+"Patchreview  and vim-codereview
+Bundle 'junkblocker/patchreview-vim'
+Bundle 'codegram/vim-codereview'
