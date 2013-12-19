@@ -11,6 +11,21 @@ else
 endif
 
 set clipboard=unnamed
+set noexpandtab " don't expand tabs to spaces
+set modeline "use modeline if recognized
+set modelines=1 "set how many modelines we want to try to read
+set nofoldenable "don't have everything folded
+let $PYTHONHOME='/System/Library/Frameworks/Python.framework/Versions/Current'
+set copyindent "copy the previous indentation on autoindenting
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set autoindent
+set smartindent
+
+syntax match Tab /\t/
+hi Tab gui=underline guifg=blue ctermbg=blue
+
 " ================ Mappings  ==============
 "Retab the document
 map <F1> :retab<CR>
@@ -68,18 +83,6 @@ let g:DisableAutoPHPFolding = 1
 set foldlevelstart=99
 
 let g:indent_guides_enable_on_vim_startup=0 "remove indent guides
-set noexpandtab " don't expand tabs to spaces
-set modeline "use modeline if recognized
-set modelines=1 "set how many modelines we want to try to read
-set nofoldenable "don't have everything folded
-let $PYTHONHOME='/System/Library/Frameworks/Python.framework/Versions/Current'
-set copyindent "copy the previous indentation on autoindenting
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-
-syntax match Tab /\t/
-hi Tab gui=underline guifg=blue ctermbg=blue
 
 "color preferences - molokai, peaksea, fruity, ir_black
 color molokai
