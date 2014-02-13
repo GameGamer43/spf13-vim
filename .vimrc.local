@@ -5,10 +5,11 @@ set shell=/bin/bash "workaround for https://github.com/airblade/vim-gitgutter/is
 if exists('+colorcolumn')
     set colorcolumn=80
     highlight ColorColumn ctermbg=red guibg=#592929
-else
-    highlight OverLength ctermbg=red guibg=#592929
-    match OverLength /\%81v.\+/
 endif
+"else
+"    highlight OverLength ctermbg=red guibg=#592929
+"    match OverLength /\%81v.\+/
+"endif
 
 set clipboard=unnamed
 set noexpandtab " don't expand tabs to spaces
@@ -47,6 +48,9 @@ nnoremap <F6> :set nornu<CR>
 " Tabman Plugin
 let g:tabman_toggle = '<F7>'
 let g:tabman_number = 0
+
+" Vim-better-whitespace
+nnoremap <F8> :StripWhitespace<CR>
 
 " =============== Skeleton files ===========
 " When creating a new python file, add the shebang
